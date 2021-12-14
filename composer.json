@@ -1,0 +1,26 @@
+{
+  "name": "igorbunov/edna-api-php-sdk",
+  "description": "PHP SDK for integration with edna.ru api",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "igorbunov",
+      "email": "igorbunov.ua@mail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.2|^8.0",
+    "guzzlehttp/guzzle": "^7.0.1"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "igorbunov\\Edna\\" : "src"
+    }
+  },
+  "scripts": {
+  }
+}
