@@ -4,6 +4,7 @@ namespace igorbunov\Edna\Validator;
 
 use igorbunov\Edna\Validator\ValicatorContract;
 use igorbunov\Edna\Exceptions\UnknownCodeException;
+use igorbunov\Edna\Exceptions\EmptyResponseException;
 
 class ResponseValidator implements ValicatorContract
 {
@@ -121,8 +122,12 @@ class ResponseValidator implements ValicatorContract
         ]
     ];
 
-    public function validate(array $response): void
+    public function validate(?array $response = []): void
     {
+        if (empty($response)) {
+            throw new EmptyResponseException('Пустой ответ от edna api');
+        }
+
         if (!array_key_exists('code', $response)) {
             throw new \Exception('No code key in response: ' . \json_encode($response));
         }
