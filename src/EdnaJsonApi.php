@@ -48,7 +48,7 @@ class EdnaJsonApi
             ]
         );
 
-        $jsonResponse = json_decode($response->getBody()->getContents(), true);
+        $jsonResponse = json_decode($response->getBody()->getContents(), true) ?? [];
 
         $this->validator->validate($jsonResponse);
 
@@ -63,7 +63,7 @@ class EdnaJsonApi
             $this->requestOptions
         );
 
-        $jsonResponse = json_decode($response->getBody()->getContents(), true);
+        $jsonResponse = json_decode($response->getBody()->getContents(), true) ?? [];
 
         $this->validator->validate($jsonResponse);
 
@@ -80,7 +80,7 @@ class EdnaJsonApi
             ]
         );
 
-        $jsonResponse = json_decode($response->getBody()->getContents(), true);
+        $jsonResponse = json_decode($response->getBody()->getContents(), true) ?? [];
 
         $this->validator->validate($jsonResponse);
 
