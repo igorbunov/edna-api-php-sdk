@@ -11,7 +11,7 @@ class Config implements ConfigContract
 
     public function __construct(
         string $apiKey,
-        string $aipUrl = 'https://im.edna.ru/api/'
+        string $aipUrl = 'https://app.edna.ru/api/old/'
     ) {
         $this->apiUrl = $aipUrl;
         $this->apiKey = $apiKey;
